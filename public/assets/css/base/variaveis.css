@@ -1,0 +1,14 @@
+:root {
+    --cor-principal: #fff;
+    --cor-secundaria: #f2f4f9;
+    --cor-background-navbar: #494747;
+    --cor-border: #000000;
+    --cor-sombra: #00000038;
+    
+    --font-navbar: font-family: 'Ubuntu', sans-serif;
+    --font-container-titulo: font-family: "Gotham SSm A", sans-serif;
+    --font-container-tabela: font-family: "Open Sans", sans-serif;
+
+    --border-tabela: 2px solid var(--cor-border);
+    --sombra: 0 5px 10px var(--cor-sombra); 
+}

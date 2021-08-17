@@ -1,0 +1,20 @@
+.container-dashboard {
+    height: 100vh;
+    width: 85%;
+    background-color: var(--cor-secundaria);
+}
+.dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    background-color: var(--cor-principal);
+    
+}
+
+.dashboard-titulo {
+    font-family: var(--font-container-titulo);
+    font-size: 2rem;
+}
+
+
