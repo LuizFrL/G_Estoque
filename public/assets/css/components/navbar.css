@@ -4,6 +4,7 @@
     background-color: var(--cor-background-navbar);
     
 }
+
 .navbar-item {
     margin-top: 0.5rem;
     margin-bottom: 2.3rem;
@@ -21,6 +22,7 @@
 }
 
 .navbar {
+    
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -55,4 +57,11 @@
     justify-content: space-around;
 }
 
+#close {
+    align-self: flex-end;
+    background-color: var(--cor-background-navbar);
+}
 
+#check {
+    display: none;
+}
