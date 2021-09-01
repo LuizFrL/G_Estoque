@@ -1,7 +1,7 @@
 .container-dashboard {
     height: 100vh;
     width: 90%;
-    background-color: var(--cor-secundaria);
+    
     display: flex;
     flex-direction: column;
    
@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     height: 6rem;
-    background-color: var(--cor-principal);
+    
     
 }
 

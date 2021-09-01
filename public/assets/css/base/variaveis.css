@@ -5,6 +5,10 @@
     --cor-border: #000000;
     --cor-sombra: #00000038;
     
+    --cor-cabecalho-escuro: black;
+    --cor-fundo-escuro: grey;
+    --cor-texto-escuro: white;
+
     --font-navbar: font-family: 'Ubuntu', sans-serif;
     --font-container-titulo: font-family: "Gotham SSm A", sans-serif;
     --font-container-tabela: font-family: "Open Sans", sans-serif;

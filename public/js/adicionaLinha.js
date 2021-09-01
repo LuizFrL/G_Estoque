@@ -1,6 +1,8 @@
 const corpoTabela = $(".tabela-corpo")
 $(".botao-ajuda").click(adicionarLinha)
 var cont = 0006
+
+
 function adicionarLinha() {
     cont += 1
     const conteudo = `

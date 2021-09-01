@@ -1,0 +1,11 @@
+.cabecalho-escuro{
+    background-color: var(--cor-cabecalho-escuro);
+}
+
+.container-escuro {
+    background-color: var(--cor-fundo-escuro);
+}
+
+.texto-escuro {
+    color: var(--cor-texto-escuro);
+}
