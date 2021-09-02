@@ -1,18 +1,28 @@
-const corpoTabela = $(".tabela-corpo")
-$(".botao-ajuda").click(adicionarLinha)
-var cont = 0006
 
+$(".botao-ajuda").click(montarLinha);
 
-function adicionarLinha() {
-    cont += 1
-    const conteudo = `
-    <tr class="tabela-linha">
-              <th class="tabela-item" scope="row">000${cont}</th>
-              <td class="tabela-item">Trakinas</td>
-              <td class="tabela-item">R$ 7,00</td>
-              <td class="tabela-item">70 Unidades</td>
-            </tr>
-    `
+var cont = 6;
 
-    corpoTabela.append(conteudo)
+function novaLinha(nome, valor, qnt) {
+  cont += 1
+  var corpo = $(".tabela-corpo")
+  var linha = $("<tr>").addClass("tabela-linha")
+  var itemId = $("<td>").addClass("tabela-item").text(`${cont}`)
+  var itemNome = $("<td>").addClass("tabela-item").text(`${nome}`)
+  var itemValor = $("<td>").addClass("tabela-item").text(`R$ ${valor},00 `)
+  var itemQnt = $("<td>").addClass("tabela-item").text(`${qnt} Unidades`)
+  linha.append(itemId ,itemNome, itemValor, itemQnt)
+  corpo.append(linha)
+}
+
+function montarLinha() {
+  var nomeForm = $(".formulario-nome").val();
+  var valorFomr = $(".formulario-valor").val();
+  var qntForm = $(".formulario-qnt").val();
+  if(nomeForm == 0 || valorFomr == 0 || qntForm == 0) {
+    return
+  } else {
+    novaLinha(nomeForm, valorFomr, qntForm)
+  }
+ 
 }

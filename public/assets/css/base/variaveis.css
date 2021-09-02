@@ -1,12 +1,12 @@
 :root {
     --cor-principal: #fff;
     --cor-secundaria: #f2f4f9;
-    --cor-background-navbar: #494747;
+    --cor-background-navbar: #34aa99;
     --cor-border: #000000;
     --cor-sombra: #00000038;
     
     --cor-cabecalho-escuro: black;
-    --cor-fundo-escuro: grey;
+    --cor-fundo-escuro: rgb(85, 85, 85);
     --cor-texto-escuro: white;
 
     --font-navbar: font-family: 'Ubuntu', sans-serif;
@@ -14,5 +14,5 @@
     --font-container-tabela: font-family: "Open Sans", sans-serif;
 
     --border-tabela: 2px solid var(--cor-border);
-    --sombra: 0 5px 10px var(--cor-sombra); 
+    --sombra: 4px 4px 20px 0px rgba(0, 0, 0, 0.04); 
 }

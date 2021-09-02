@@ -12,9 +12,11 @@
     <link rel="stylesheet" href="../assets/css/base/variaveis.css">
     <link rel="stylesheet" href="../assets/css/base/base.css">
     <link rel="stylesheet" href="../assets/css/base/temaEscuro.css">
-    <link rel="stylesheet" href="../assets/css/components/navbar.css">
-    <link rel="stylesheet" href="../assets/css/components/container.css">
-    <link rel="stylesheet" href="../assets/css/components/tabela.css">
+    <link rel="stylesheet" href="../assets/css/base/navbar.css">
+    <link rel="stylesheet" href="../assets/css/base/container.css">
+    <link rel="stylesheet" href="../assets/css/components/estoque/tabela.css">
+    <link rel="stylesheet" href="../assets/css/components/estoque/formulario.css">
+    <link rel="stylesheet" href="../assets/css/components/ajuda/ajuda.css">
     <title>G-Stock | Estoque</title>
 </head>
 <body>
@@ -64,56 +66,63 @@
       <div class="dashboard">
         <h2 class="dashboard-titulo">ESTOQUE</h2>
       </div>
+      <div class="input-group formulario-grupo">
+        <span class="input-group-text">Adicionar Produto</span>
+        <input type="text" aria-label="Nome" class="form-control formulario-nome" placeholder="Nome">
+        <input type="number" aria-label="Valor" class="form-control formulario-valor" placeholder="Valor">
+        <input type="number" aria-label="Quantidade Disponível" class="form-control formulario-qnt" placeholder="Quantidade disponível">
+      </div>
       <div class="dashboard-tabela">
         <div class="tabela">
           <table class="table table-hover">
-            <thead class="table-dark">
-            <tr class="tabela-linha">
-              <th class="tabela-item" scope="col">ID</th>
-              <th class="tabela-item" scope="col">NOME</th>
-              <th class="tabela-item" scope="col">VALOR</th>
-              <th class="tabela-item" scope="col">QUANTIDADE DISPONÍVEL</th>
-            </tr>
+              <thead class="table-dark">
+                <tr class="tabela-linha">
+                  <th class="tabela-item" scope="col">ID</th>
+                  <th class="tabela-item" scope="col">NOME</th>
+                  <th class="tabela-item" scope="col">VALOR</th>
+                  <th class="tabela-item" scope="col">QUANTIDADE DISPONÍVEL</th>
+                </tr>
             </thead>
             <tbody class="tabela-corpo">
-            <tr class="tabela-linha">
-              <th class="tabela-item" scope="row">0001</th>
-              <td class="tabela-item">Batata Rufles</td>
-              <td class="tabela-item">R$ 2,00</td>
-              <td class="tabela-item">20 Unidades</td>
-            </tr>
-            <tr class="tabela-linha">
-              <th class="tabela-item" scope="row">0002</th>
-              <td class="tabela-item">Doritos</td>
-              <td class="tabela-item">R$ 5,00</td>
-              <td class="tabela-item">170 Unidades</td>
-            </tr class="tabela-linha">
-            <tr class="tabela-linha">
-              <th class="tabela-item" scope="row">0003</th>
-              <td class="tabela-item">Cebolitos</td>
-              <td class="tabela-item">R$ 3,00</td>
-              <td class="tabela-item">210 Unidades</td>
-            </tr>
-            <tr class="tabela-linha">
-              <th class="tabela-item" scope="row">0004</th>
-              <td class="tabela-item">Coca Cola</td>
-              <td class="tabela-item">R$ 5,00</td>
-              <td class="tabela-item">30 Unidades</td>
-            </tr>
-            <tr class="tabela-linha">
-              <th class="tabela-item" scope="row">0005</th>
-              <td class="tabela-item">Garrafinha</td>
-              <td class="tabela-item">R$ 10,00</td>
-              <td class="tabela-item">10 Unidades</td>
-            </tr>
-            <tr class="tabela-linha">
-              <th class="tabela-item" scope="row">0006</th>
-              <td class="tabela-item">Trakinas</td>
-              <td class="tabela-item">R$ 7,00</td>
-              <td class="tabela-item">70 Unidades</td>
-            </tr>
+              <tr class="tabela-linha">
+                <td class="tabela-item" >1</th>
+                <td class="tabela-item">Batata Rufles</td>
+                <td class="tabela-item">R$ 2,00</td>
+                <td class="tabela-item">20 Unidades</td>
+              </tr>
+              <tr class="tabela-linha">
+                <td class="tabela-item">2</th>
+                <td class="tabela-item">Doritos</td>
+                <td class="tabela-item">R$ 5,00</td>
+                <td class="tabela-item">170 Unidades</td>
+              </tr class="tabela-linha">
+              <tr class="tabela-linha">
+                <td class="tabela-item">3</th>
+                <td class="tabela-item">Cebolitos</td>
+                <td class="tabela-item">R$ 3,00</td>
+                <td class="tabela-item">210 Unidades</td>
+              </tr>
+              <tr class="tabela-linha">
+                <td class="tabela-item">4</th>
+                <td class="tabela-item">Coca Cola</td>
+                <td class="tabela-item">R$ 5,00</td>
+                <td class="tabela-item">30 Unidades</td>
+              </tr>
+              <tr class="tabela-linha">
+                <td class="tabela-item">5</th>
+                <td class="tabela-item">Garrafinha</td>
+                <td class="tabela-item">R$ 10,00</td>
+                <td class="tabela-item">10 Unidades</td>
+              </tr>
+              <tr class="tabela-linha">
+                <td class="tabela-item">6</th>
+                <td class="tabela-item">Trakinas</td>
+                <td class="tabela-item">R$ 7,00</td>
+                <td class="tabela-item">70 Unidades</td>
+              </tr>
             </tbody>
           </table>
+          
           <button type="submit" class="btn btn-warning botao-ajuda">Adicionar</button>
         </div>
       </div>

@@ -1,5 +1,6 @@
 .cabecalho-escuro{
     background-color: var(--cor-cabecalho-escuro);
+    animation: background-color 2s ease-in;
 }
 
 .container-escuro {
@@ -8,4 +9,8 @@
 
 .texto-escuro {
     color: var(--cor-texto-escuro);
+}
+
+.texto-claro {
+    color: black;
 }

@@ -1,20 +1,18 @@
 const background = $(".container-dashboard");
 const titulo = $(".dashboard-titulo");
-const tabela = $("tr");
+const tabela = $(".tabela-linha");
 
-const textoAjuda = $("")
 $(".icon-tema").click(mudancaDeTemaEstoque);
 
 function mudancaDeTemaEstoque() {
   mudandaBackground();
-  mudandaTitulo()
+  mudandaTitulo();
   tabela.toggleClass("texto-escuro");
 }
 
 function mudancaDeTemaAjuda() {
-    mudandaBackground();
-    mudandaTitulo()
-
+  mudandaBackground();
+  mudandaTitulo();
 }
 
 function mudandaBackground() {
@@ -22,6 +20,5 @@ function mudandaBackground() {
 }
 
 function mudandaTitulo() {
-    titulo.toggleClass("texto-escuro")
+  titulo.toggleClass("texto-escuro");
 }
-

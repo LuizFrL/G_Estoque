@@ -56,12 +56,3 @@
     display: flex;
     justify-content: space-around;
 }
-
-#close {
-    align-self: flex-end;
-    background-color: var(--cor-background-navbar);
-}
-
-#check {
-    display: none;
-}
