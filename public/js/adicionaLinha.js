@@ -1,11 +1,11 @@
 
 $(".botao-ajuda").click(montarLinha);
 
-var cont = 6;
+var cont = 15;
 
-function novaLinha(nome, valor, qnt) {
+function novaLinha(nome, valor, qnt, categoria) {
   cont += 1
-  var corpo = $(".tabela-corpo")
+  var corpo = $(`.tabela-corpo-${categoria}`)
   var linha = $("<tr>").addClass("tabela-linha")
   var itemId = $("<td>").addClass("tabela-item").text(`${cont}`)
   var itemNome = $("<td>").addClass("tabela-item").text(`${nome}`)
@@ -19,16 +19,20 @@ function novaLinha(nome, valor, qnt) {
   itemExcluir.append(imagemLixeira)
   linha.append(itemId ,itemNome, itemValor, itemQnt, itemEditar, itemExcluir)
   corpo.append(linha)
+  console.log(categoria)
 }
 
 function montarLinha() {
   var nomeForm = $(".formulario-nome").val();
   var valorFomr = $(".formulario-valor").val();
   var qntForm = $(".formulario-qnt").val();
+  var categoria = $("#select :selected").text()
+  
   if(nomeForm == 0 || valorFomr == 0 || qntForm == 0) {
     return
   } else {
-    novaLinha(nomeForm, valorFomr, qntForm)
+    novaLinha(nomeForm, valorFomr, qntForm, categoria)
+ 
   }
  
 }

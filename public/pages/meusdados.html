@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/css/base/temaEscuro.css">
     <link rel="stylesheet" href="../assets/css/base/navbar.css">
     <link rel="stylesheet" href="../assets/css/base/container.css">
+    <link rel="stylesheet" href="../assets/css/components/meusdados/meusdados.css">
     <title>G-Stock | Meus Dados</title>
 </head>
 <body>
@@ -24,12 +25,7 @@
                 <h1 class="navbar-titulo">G-STOCK</h1>
                 <div class="navbar-links">
                     <ul class="navbar-itens">
-                        <li class="navbar-item">
-                            <div class="navbar-linha">
-                                <img class="icon" src="../assets//svg/icon-visao.svg" alt="">
-                                <a class="navbar-item__link" href="index.html">Dashboard</a>
-                            </div>
-                        </li>
+                        
                         <li class="navbar-item">
                             <div class="navbar-linha">
                                 <img class="icon" src="../assets//svg/icon-estoque.svg" alt="">
@@ -63,8 +59,41 @@
             <div class="dashboard">
                 <h2 class="dashboard-titulo">MEUS DADOS</h2>
             </div>
+            <div class="container-meusdados">
+                <form class="row g-3">
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Nome Completo</label>
+                        <input type="text" class="form-control form-dados" id="inputAddress" disabled placeholder="1234 Main St " value="Gustavo Finger">
+                      </div>   
+                    <div class="col-md-6">
+                      <label for="inputEmail4" class="form-label">Email</label>
+                      <input type="email" class="form-control form-dados"  disabled id="inputEmail4" value="gsotck@email.com">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="inputPassword4" class="form-label">Password</label>
+                      <input type="password" class="form-control form-dados"  disabled id="inputPassword4" value="dddddddddd">
+                    </div>
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Nome Do Estabelecimento</label>
+                        <input type="text" class="form-control form-dados" id="inputAddress" disabled placeholder="1234 Main St" value="Supermecados Brasília">
+                      </div>   
+                      <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Telefone Pessoal</label>
+                        <input type="number" class="form-control form-dados"  disabled id="inputEmail4" value="999999999">
+                      </div>
+                      <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Telefone do Estabelecimento</label>
+                        <input type="number" class="form-control form-dados"  disabled id="inputPassword4" value="988888888">
+                      </div>
+                    <div class="col-6">
+                      <button type="submit" class="btn btn-outline-success botao-editar">Editar</button>
+                      <button type="submit" class="btn btn-success botao-salvar">Salvar</button>
+                    </div>
+                  </form>
+            </div>
     </main>
 </body>
 <script src="../js/jquery.js"></script>
 <script src="../js/mudancaDeTema.js"></script>
+<script src="../js/manipuladados.js"></script>
 </html>
