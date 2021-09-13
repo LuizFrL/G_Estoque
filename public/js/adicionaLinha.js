@@ -12,7 +12,7 @@ function novaLinha(nome, valor, qnt, categoria) {
   var itemValor = $("<td>").addClass("tabela-item").text(`R$ ${valor},00 `)
   var itemQnt = $("<td>").addClass("tabela-item").text(`${qnt} Unidades`)
   var imagemPincel = $("<img>").attr("src", "../assets/svg/pencil.svg")
-  var imagemLixeira = $("<img>").attr("src", "../assets/svg/trash.svg")
+  var imagemLixeira = $("<img>").attr("src", "../assets/svg/trash.svg").addClass("exclui")
   var itemEditar = $("<td>").addClass("tabela-item")
   var itemExcluir = $("<td>").addClass("tabela-item")
   itemEditar.append(imagemPincel)

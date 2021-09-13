@@ -4,6 +4,6 @@
     align-self: center;
 }
 
-.botao-ajuda {
+.botao-ajuda, .botao-salvar {
     margin-top: 1.2rem;
 }
