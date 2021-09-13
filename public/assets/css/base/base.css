@@ -1,3 +1,8 @@
 .container-principal {
     display: flex;
 }
+
+.logo {
+    width: 60px;
+    
+}
