@@ -1,7 +1,8 @@
 .container-navbar {
     height: 100vh;
     width: 15%;
-    background-color: var(--cor-background-navbar)
+    background-color: var(--cor-background-navbar);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     
 }
 
