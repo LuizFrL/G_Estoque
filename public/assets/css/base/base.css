@@ -6,3 +6,28 @@
     width: 60px;
     
 }
+
+.botao-base:focus {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+} 
+
+.form-control:focus {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-color: #ced4da;
+}
+
+input::placeholder {
+    color: black !important
+}
+
+textarea::placeholder {
+    color: black !important
+}
+
+.tabela-linha:hover {
+    background-color: rgb(0, 253, 42);
+}

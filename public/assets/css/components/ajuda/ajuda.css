@@ -4,6 +4,12 @@
     align-self: center;
 }
 
-.botao-ajuda, .botao-salvar {
+.botao-ajuda, .botao-salvar, .botao-adicionar {
     margin-top: 1.2rem;
+}
+
+.form-textarea {
+    resize: vertical;
+    
+    max-height: 200px;
 }

@@ -1,5 +1,5 @@
 
-$(".botao-ajuda").click(montarLinha);
+$(".botao-adicionar").click(montarLinha);
 
 var cont = 15;
 
@@ -19,6 +19,9 @@ function novaLinha(nome, valor, qnt, categoria) {
   itemExcluir.append(imagemLixeira)
   linha.append(itemId ,itemNome, itemValor, itemQnt, itemEditar, itemExcluir)
   corpo.append(linha)
+  limpaForm()
+  
+
   
 }
 
@@ -32,7 +35,15 @@ function montarLinha() {
     return
   } else {
     novaLinha(nomeForm, valorFomr, qntForm, categoria)
+    
  
   }
- 
 }
+
+function limpaForm() {
+  $(".formulario-nome").val("");
+  $(".formulario-valor").val("");
+  $(".formulario-qnt").val("");
+}
+
+

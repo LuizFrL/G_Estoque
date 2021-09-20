@@ -69,7 +69,7 @@
         <input type="text" aria-label="Nome" class="form-control formulario-nome" placeholder="Nome">
         <input type="number" aria-label="Valor" class="form-control formulario-valor" placeholder="Valor">
         <input type="number" aria-label="Quantidade Disponível" class="form-control formulario-qnt" placeholder="Quantidade disponível">
-        <select id="select">
+        <select id="select" class="formulario-select">
           <option value="comidas">Comidas</option>
           <option value="bebidas">Bebidas</option>
           <option value="limpeza">Limpeza</option>
@@ -78,13 +78,13 @@
       <div class="botoes-grupo" id="myGroup">
         
         
-            <button class="btn btn-outline-success botao-categoria" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            <button class="btn btn-outline-success botao-categoria botao-base " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
                 Comidas
             </button>
-            <button class="btn btn-outline-success botao-categoria" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+            <button class="btn btn-outline-success botao-categoria botao-base" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
                 Bebidas
             </button>
-            <button class="btn btn-outline-success botao-categoria" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+            <button class="btn btn-outline-success botao-categoria botao-base" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
                 Limpeza
             </button>
        
@@ -157,8 +157,8 @@
                     </tbody>
                   </table>
                   
-                  <button type="submit" class="btn btn-warning botao-ajuda">Adicionar</button>
-                  <button type="submit" class="btn btn-warning botao-salvar">Salvar</button>
+                  <button type="submit" class="btn btn-outline-success botao-adicionar botao-base">Adicionar</button>
+                  <button type="submit" class="btn btn-outline-success botao-salvar botao-base">Salvar</button>
                 </div>
               </div>
             </div>
@@ -224,8 +224,8 @@
                     </tbody>
                   </table>
                   
-                  <button type="submit" class="btn btn-warning botao-ajuda custom-button">Adicionar</button>
-                  <button type="submit" class="btn btn-warning botao-salvar">Salvar</button>
+                  <button type="submit" class="btn btn-outline-success botao-adicionar botao-base">Adicionar</button>
+                  <button type="submit" class="btn btn-outline-success botao-salvar botao-base">Salvar</button>
                 </div>
               </div>
             </div>
@@ -249,9 +249,9 @@
                     <tbody class="tabela-corpo-Limpeza">
                       <tr class="tabela-linha">
                         <td class="tabela-item">12</th>
-                        <td class="tabela-item">Sabão em Pó</td>
-                        <td class="tabela-item">R$ 15,00</td>
-                        <td class="tabela-item">200 Unidades</td>
+                        <td class="tabela-item editavel">Sabão em Pó</td>
+                        <td class="tabela-item editavel">R$ 15,00</td>
+                        <td class="tabela-item editavel">200 Unidades</td>
                         <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
                         <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
                       </tr>
@@ -283,10 +283,11 @@
                       
                     </tbody>
                   </table>
-                  <button type="submit" class="btn btn-warning botao-ajuda">Adicionar</button>
-                  <button type="submit" class="btn btn-warning botao-salvar">Salvar</button>
+                  <button type="submit" class="btn btn-outline-success botao-adicionar botao-base">Adicionar</button>
+                  <button type="submit" class="btn btn-outline-success botao-salvar botao-base">Salvar</button>
             </div>
         </div>
+        
     </div>
       
 
@@ -302,5 +303,6 @@
 <script src="../js/removeLinha.js"></script>
 <script src="../js/salvaTabela.js"></script>
 <script src="../js/editarTabela.js"></script>
+<script src="../js/botaoAtivo.js"></script>
 
 </html>
