@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/fivicon/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/base/reset.css">
+    <link rel="stylesheet" href="../assets/css/base/variaveis.css">
+    <link rel="stylesheet" href="../assets/css/base/base.css">
+    <link rel="stylesheet" href="../assets/css/base/temaEscuro.css">
+    <link rel="stylesheet" href="../assets/css/base/navbar.css">
+    <link rel="stylesheet" href="../assets/css/base/container.css">
+    <link rel="stylesheet" href="../assets/css/components/estoque/tabela.css">
+    <link rel="stylesheet" href="../assets/css/components/estoque/formulario.css">
+    <link rel="stylesheet" href="../assets/css/components/estoque/collapse.css">
+    <link rel="stylesheet" href="../assets/css/components/ajuda/ajuda.css">
+    <title>G-Stock | Estoque</title>
+</head>
+<body>
+  <main class="container-principal">
+    <div class="container-navbar">
+      <nav class="navbar">
+        <h1 class="navbar-titulo">G-STOCK</h1>
+        <div class="navbar--links">
+          <ul class="navbar-itens">
+            
+            <li class="navbar-item">
+              <div class="navbar-linha">
+                <img class="icon" src="../assets/svg/icon-estoque.svg" alt="">
+                <a class="navbar-item__link" href="/estoque" data-link>Estoque</a>
+              </div>
+            </li>
+            <li class="navbar-item">
+              <div class="navbar-linha">
+                <img class="icon" src="../assets/svg/icon-dados.svg" alt="">
+                <a class="navbar-item__link" href="/meusdados" data-link>Meus Dados</a>
+              </div>
+            </li>
+            <li class="navbar-item">
+              <div class="navbar-linha">
+                <img class="icon" src="../assets/svg/icon-ajuda.svg" alt="">
+                <a class="navbar-item__link" href="/ajuda" data-link>Ajuda</a>
+              </div>
+            </li>
+            <li class="navbar-item">
+              <div class="navbar-linha">
+                <img class="icon" src="../assets//svg/icon-sobre.svg" alt="">
+                <a class="navbar-item__link" href="/sobrenos" data-link>Sobre nós</a>
+              </div>
+            </li>
+            
+            <a href="#"><img class="icon icon-tema" src="../assets//svg/icon-tema.svg" alt=""></a>
+           
+        </div>
+      </nav>
+    </div>
+    <div class="container-dashboard">
+      <div class="dashboard">
+        <img src="../assets/icone-verde.png" width="60" alt="logo ">
+        <h2 class="dashboard-titulo">| ESTOQUE</h2>
+      </div>
+      <div class="input-group formulario-grupo">
+        <span class="input-group-text">Adicionar Produto</span>
+        <input type="text" aria-label="Nome" class="form-control formulario-nome" placeholder="Nome">
+        <input type="number" aria-label="Valor" class="form-control formulario-valor" placeholder="Valor">
+        <input type="number" aria-label="Quantidade Disponível" class="form-control formulario-qnt" placeholder="Quantidade disponível">
+        <select id="select" class="formulario-select">
+          <option value="comidas">Comidas</option>
+          <option value="bebidas">Bebidas</option>
+          <option value="limpeza">Limpeza</option>
+        </select>
+      </div>
+      <div class="botoes-grupo" id="myGroup">
+        
+        
+            <button class="btn btn-outline-success botao-categoria botao-base " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">
+                Comidas
+            </button>
+            <button class="btn btn-outline-success botao-categoria botao-base" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                Bebidas
+            </button>
+            <button class="btn btn-outline-success botao-categoria botao-base" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                Limpeza
+            </button>
+       
+        
+        <div class="collapse" id="collapseExample" data-parent="#myGroup">
+            <div class="card card-body">
+              <div class="dashboard-tabela">
+                <div class="tabela">
+                  <table class="table table-hover">
+                      <thead class="table-dark">
+                        <tr class="tabela-linha">
+                          <th class="tabela-item" scope="col">ID</th>
+                          <th class="tabela-item" scope="col">NOME</th>
+                          <th class="tabela-item" scope="col">VALOR</th>
+                          <th class="tabela-item" scope="col">QUANTIDADE DISPONÍVEL</th>
+                          <th class="tabela-item" scope="col">EDITAR</th>
+                          <th class="tabela-item" scope="col">EXCLUIR</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabela-corpo-Comidas">
+                      <tr class="tabela-linha">
+                        <td class="tabela-item" >1</th>
+                        <td class="tabela-item"> Biscoito Oreo</td>
+                        <td class="tabela-item">R$ 7,00</td>
+                        <td class="tabela-item">83 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">2</th>
+                        <td class="tabela-item">Doritos</td>
+                        <td class="tabela-item">R$ 5,00</td>
+                        <td class="tabela-item">170 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                        
+                      </tr class="tabela-linha">
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">3</th>
+                        <td class="tabela-item">Pão de Alho</td>
+                        <td class="tabela-item">R$ 3,00</td>
+                        <td class="tabela-item">210 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">4</th>
+                        <td class="tabela-item">Pão de Queijo</td>
+                        <td class="tabela-item">R$ 5,00</td>
+                        <td class="tabela-item">30 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">5</th>
+                        <td class="tabela-item">Feijão Tropeiro</td>
+                        <td class="tabela-item">R$ 10,00</td>
+                        <td class="tabela-item">10 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">6</th>
+                        <td class="tabela-item">Trakinas</td>
+                        <td class="tabela-item">R$ 7,00</td>
+                        <td class="tabela-item">70 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  <button type="submit" class="btn btn-outline-success botao-adicionar botao-base">Adicionar</button>
+                  <button type="submit" class="btn btn-outline-success botao-salvar botao-base">Salvar</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="collapse" id="collapseExample2" data-parent="#myGroup">
+            <div class="card card-body">
+              <div class="dashboard-tabela">
+                <div class="tabela">
+                  <table class="table table-hover">
+                      <thead class="table-dark">
+                        <tr class="tabela-linha">
+                          <th class="tabela-item" scope="col">ID</th>
+                          <th class="tabela-item" scope="col">NOME</th>
+                          <th class="tabela-item" scope="col">VALOR</th>
+                          <th class="tabela-item" scope="col">QUANTIDADE DISPONÍVEL</th>
+                          <th class="tabela-item" scope="col">EDITAR</th>
+                          <th class="tabela-item" scope="col">EXCLUIR</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabela-corpo-Bebidas">
+                      <tr class="tabela-linha">
+                        <td class="tabela-item" >7</th>
+                        <td class="tabela-item ">Coca Cola </td>
+                        <td class="tabela-item ">R$ 10,00</td>
+                        <td class="tabela-item ">80 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png"  alt=""></td>
+                      </tr>
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">8</th>
+                        <td class="tabela-item">Vinho Branco</td>
+                        <td class="tabela-item">R$ 60,00</td>
+                        <td class="tabela-item">34 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                        
+                      </tr class="tabela-linha">
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">9</th>
+                        <td class="tabela-item">Catuaba</td>
+                        <td class="tabela-item">R$ 20,00</td>
+                        <td class="tabela-item">70 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">10</th>
+                        <td class="tabela-item">Suco de Uva</td>
+                        <td class="tabela-item">R$ 5,00</td>
+                        <td class="tabela-item">36 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">11</th>
+                        <td class="tabela-item">Soda Limonada</td>
+                        <td class="tabela-item">R$ 10,00</td>
+                        <td class="tabela-item">3 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  
+                  <button type="submit" class="btn btn-outline-success botao-adicionar botao-base">Adicionar</button>
+                  <button type="submit" class="btn btn-outline-success botao-salvar botao-base">Salvar</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="collapse" id="collapseExample3" data-parent="#myGroup">
+            <div class="card card-body">
+              <div class="dashboard-tabela">
+                <div class="tabela">
+                  <table class="table table-hover">
+                      <thead class="table-dark">
+                        <tr class="tabela-linha">
+                          <th class="tabela-item" scope="col">ID</th>
+                          <th class="tabela-item" scope="col">NOME</th>
+                          <th class="tabela-item" scope="col">VALOR</th>
+                          <th class="tabela-item" scope="col">QUANTIDADE DISPONÍVEL</th>
+                          <th class="tabela-item" scope="col">EDITAR</th>
+                          <th class="tabela-item" scope="col">EXCLUIR</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabela-corpo-Limpeza">
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">12</th>
+                        <td class="tabela-item editavel">Sabão em Pó</td>
+                        <td class="tabela-item editavel">R$ 15,00</td>
+                        <td class="tabela-item editavel">200 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">13</th>
+                        <td class="tabela-item">Rodo </td>
+                        <td class="tabela-item">R$ 9,00</td>
+                        <td class="tabela-item">170 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                        
+                      </tr class="tabela-linha">
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">14</th>
+                        <td class="tabela-item">Paninho de Pia</td>
+                        <td class="tabela-item">R$ 25,00</td>
+                        <td class="tabela-item">10 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      <tr class="tabela-linha">
+                        <td class="tabela-item">15</th>
+                        <td class="tabela-item">Desinfetante</td>
+                        <td class="tabela-item">R$ 45,00</td>
+                        <td class="tabela-item">28 Unidades</td>
+                        <td class="tabela-item"><img class="edita" src="../assets/svg/editar-arquivo.png" alt=""></td>
+                        <td class="tabela-item"><img  class="exclui"src="../assets/svg/lixeira.png" alt=""></td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                  <button type="submit" class="btn btn-outline-success botao-adicionar botao-base">Adicionar</button>
+                  <button type="submit" class="btn btn-outline-success botao-salvar botao-base">Salvar</button>
+            </div>
+        </div>
+        
+    </div>
+      
+
+    </div>
+  </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/adicionaLinha.js"></script>
+<script src="../js/mudancaDeTema.js"></script>
+<script src="../js/removeLinha.js"></script>
+<script src="../js/salvaTabela.js"></script>
+<script src="../js/editarTabela.js"></script>
+<script src="../js/botaoAtivo.js"></script>
+
+</html>
