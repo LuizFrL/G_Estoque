@@ -4,5 +4,6 @@ services:
   django_service:
     build:
       context: .
+    container_name: back-end-gstoque
     ports:
       - "8000:8000"

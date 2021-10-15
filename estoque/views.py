@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, filters
 from estoque.models import EstoqueModel
 from estoque.serializers import EstoqueSerializer
 
@@ -7,3 +7,4 @@ from estoque.serializers import EstoqueSerializer
 class EstoqueViewSet(viewsets.ModelViewSet):
     queryset = EstoqueModel.objects.all()
     serializer_class = EstoqueSerializer
+    filterset_fields = '__all__'
