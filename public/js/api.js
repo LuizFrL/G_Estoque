@@ -97,5 +97,6 @@ $(function () {
       tr.append(td1, td2, td3, td4, td5, td6);
       $(`.tabela-corpo-${data.categoria}`).append(tr);
     });
+    
   });
 });
