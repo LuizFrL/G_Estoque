@@ -16,7 +16,7 @@ function deletar(getId) {
     dataType: "json",
     contentType: "application/json",
     success: function (data) {
-      console.log(data);
+      
     },
     data: JSON.stringify(person)
   });

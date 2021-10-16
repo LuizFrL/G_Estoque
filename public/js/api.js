@@ -53,12 +53,14 @@ $(function () {
         $(th5).addClass("tabela-item").attr("scope", "col").text("EDITAR");
         var th6 = document.createElement("th");
         $(th6).addClass("tabela-item").attr("scope", "col").text("EXCLUIR");
+        var th7 = document.createElement("th")
+        $(th7).addClass("tabela-item").attr("scope", "col").text("SALVAR");
         $(".botoes-grupo").append(collapse);
         var option = document.createElement("option");
         $(option).val(data.categoria).text(data.categoria);
         $(".formulario-select").append(option);
         
-        tr.append(th1, th2, th3, th4, th5, th6);
+        tr.append(th1, th2, th3, th4, th5, th7, th6);
         thead.append(tr);
         table.append(thead, tbody);
         tabela.append(table);
@@ -75,9 +77,9 @@ $(function () {
       var td2 = document.createElement("td");
       $(td2).addClass("tabela-item").text(data.nome);
       var td3 = document.createElement("td");
-      $(td3).addClass("tabela-item").text(`R$ ${data.valor}`);
+      $(td3).addClass("tabela-item").text(`${data.valor}`);
       var td4 = document.createElement("td");
-      $(td4).addClass("tabela-item").text(`${data.qtd} Unidades`);
+      $(td4).addClass("tabela-item").text(`${data.qtd}`);
       var td5 = document.createElement("td");
       $(td5).addClass("tabela-item");
       var imgEdit = document.createElement("img");
@@ -92,9 +94,17 @@ $(function () {
         .addClass("exclui")
         .attr("src", "../assets/svg/lixeira.png")
         .attr("alt", " ");
+        var td7 = document.createElement("td")
+        $(td7).addClass("tabela-item");
+        var imgSalvar = document.createElement("img")
+        $(imgSalvar)
+        .addClass("salvar")
+        .attr("src", "../assets/svg/salvar.png")
+        .attr("alt", " ");
       td5.append(imgEdit);
       td6.append(imgExclui);
-      tr.append(td1, td2, td3, td4, td5, td6);
+      td7.append(imgSalvar)
+      tr.append(td1, td2, td3, td4, td5, td7, td6);
       $(`.tabela-corpo-${data.categoria}`).append(tr);
     });
     

@@ -21,7 +21,7 @@
 }
 
     
-.edita, .exclui {
+.edita, .exclui, .salvar {
     cursor: pointer;
 }
 
@@ -30,7 +30,13 @@
     
 }
 
-.botao-adicionar, .botao-salvar {
-    height: 100px;
-    width: 100px;
+.botao-adicionar{
+    height: 50px;
+    width: 150px;
 } 
+
+.gg {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
