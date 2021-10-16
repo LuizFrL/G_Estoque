@@ -1,4 +1,4 @@
-from rest_framework import viewsets, filters
+from rest_framework import viewsets
 from estoque.models import EstoqueModel
 from estoque.serializers import EstoqueSerializer
 
