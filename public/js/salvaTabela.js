@@ -4,6 +4,7 @@ $(".table").on('mouseover', salvaTabelaPeloEnter)
 function salvaTabela() {
 
     $(".tabela-linha").removeAttr("contenteditable")
+    
 }
 
 function salvaTabelaPeloEnter() {

@@ -1,5 +1,6 @@
 .container-principal {
     display: flex;
+    
 }
 
 .logo {
@@ -31,3 +32,4 @@ textarea::placeholder {
 .tabela-linha:hover {
     background-color: rgb(0, 253, 42);
 }
+

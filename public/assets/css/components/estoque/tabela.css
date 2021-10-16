@@ -25,3 +25,12 @@
     cursor: pointer;
 }
 
+.adc {
+    margin-top: 80px;
+    
+}
+
+.botao-adicionar, .botao-salvar {
+    height: 100px;
+    width: 100px;
+} 

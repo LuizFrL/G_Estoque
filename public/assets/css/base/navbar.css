@@ -45,7 +45,9 @@
     align-items: center;
     flex-direction: column;
     margin-top: 4rem;
+    width: 250px;
 }
+
 
 .icon {
     margin-right: 0.5rem;

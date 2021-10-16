@@ -29,7 +29,8 @@ function montarLinha() {
   var nomeForm = $(".formulario-nome").val();
   var valorFomr = $(".formulario-valor").val();
   var qntForm = $(".formulario-qnt").val();
-  var categoria = $("#select :selected").text()
+  var categoria = $("#select :selected").val()
+  
   
   if(nomeForm == 0 || valorFomr == 0 || qntForm == 0) {
     return
@@ -45,5 +46,6 @@ function limpaForm() {
   $(".formulario-valor").val("");
   $(".formulario-qnt").val("");
 }
+
 
 
