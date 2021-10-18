@@ -12,4 +12,4 @@ class FeedbackModelSerializer(ModelSerializer):
     class Meta:
         model = FeedbackModel
         fields = '__all__'
-    depth = 1
+        depth = 1
