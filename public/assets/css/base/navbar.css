@@ -3,6 +3,8 @@
     width: 15%;
     background-color: var(--cor-background-navbar);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    position: fixed;
+    
     
 }
 
@@ -41,11 +43,12 @@
 .navbar-itens {
     font-family: var(--font-navbar);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     margin-top: 4rem;
     width: 250px;
+    
 }
 
 

@@ -32,7 +32,7 @@ function post(nome, valor, qnt, categoria) {
     dataType: "json",
     contentType: "application/json",
     success: function (data) {
-      var corpo = $(`.tabela-corpo-${categoria}`);
+      var corpo = $(`.tabela-corpo-${categoria.replace(" ", "_")}`);
       var linha = $("<tr>").addClass("tabela-linha");
       var itemId = $("<td>").addClass("tabela-item").text(`${data.id}`);
       var itemNome = $("<td>").addClass("tabela-item").text(`${nome}`);

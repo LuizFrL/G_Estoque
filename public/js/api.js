@@ -1,5 +1,5 @@
 $(function () {
-  $.get("http://127.0.0.1:8000/estoque/", function (data, status) {
+  $.get("http://127.0.0.1:8000/estoque/?ordering=-categoria,nome", function (data, status) {
     var categorias = [];
     data.forEach((data) => {
       if (!categorias.includes(data.categoria)) {
@@ -12,16 +12,21 @@ $(function () {
           .addClass("botao-base")
           .attr("type", "button")
           .attr("data-toggle", "collapse")
-          .attr("data-target", `#collapseExample${data.categoria}`)
+          .attr("data-target", `#collapseExample${data.categoria.replace(" ","_")}`)
           .attr("aria-expanded", "true")
           .attr("aria-controls", "collapseExample")
-          .text(data.categoria);
+          .text(data.categoria)
+          .click(function() {
+            $(".botao-selecionado").removeClass("botao-selecionado")
+            $(this).addClass("botao-selecionado")
+            
+          })
         $(".botoes-grupo").prepend(botao);
         var collapse = document.createElement("div");
         $(collapse)
           .addClass("collapse")
           .attr("data-parent", "#myGroup")
-          .attr("id", `collapseExample${data.categoria}`);
+          .attr("id", `collapseExample${data.categoria.replace(" ","_")}`);
         var card = document.createElement("div");
         $(card).addClass("card").addClass("card-body");
         var dashboard = document.createElement("div");
@@ -33,9 +38,9 @@ $(function () {
         var thead = document.createElement("thead");
         $(thead)
           .addClass("table-dark")
-          .addClass(`tabela-head-${data.categoria}`);
+          .addClass(`tabela-head-${data.categoria.replace(" ","_")}`);
         var tbody = document.createElement("tbody");
-        $(tbody).addClass(`tabela-corpo-${data.categoria}`);
+        $(tbody).addClass(`tabela-corpo-${data.categoria.replace(" ","_")}`);
         var tr = document.createElement("tr");
         $(tr).addClass("tabela-linha");
         var th1 = document.createElement("th");
@@ -105,8 +110,7 @@ $(function () {
       td6.append(imgExclui);
       td7.append(imgSalvar)
       tr.append(td1, td2, td3, td4, td5, td7, td6);
-      $(`.tabela-corpo-${data.categoria}`).append(tr);
+      $(`.tabela-corpo-${data.categoria.replace(" ", "_")}`).append(tr);
     });
-    
   });
 });

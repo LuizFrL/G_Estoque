@@ -33,10 +33,15 @@
 .botao-adicionar{
     height: 50px;
     width: 150px;
+    
 } 
 
 .gg {
     display: flex;
     width: 100%;
     justify-content: center;
+}
+.botao-selecionado {
+    color: white;
+    background-color: #198754;
 }
