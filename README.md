@@ -38,8 +38,10 @@ so temos que rodar um comando agora, para subir a API localmente:
 
 `python manage.py runserver`
 
+
 Novamente, é necessario estar no mesmo diretorio em que o arquivo `requirements.txt`
 se encontra.
+
 ---
 ### Usando Docker
 
