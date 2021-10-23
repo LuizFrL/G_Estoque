@@ -5,12 +5,11 @@ from feedback.models import FeedbackModel, FeedbackTypeModel
 class FeedbackTypeModelSerializer(ModelSerializer):
     class Meta:
         model = FeedbackTypeModel
-        fields = ['id', 'type']
+        fields = '__all__'
 
 
 class FeedbackModelSerializer(ModelSerializer):
     class Meta:
         model = FeedbackModel
-        fields = ['id', 'type', 'email', 'feedback']
-
-    depth = 1
+        fields = '__all__'
+        depth = 1
