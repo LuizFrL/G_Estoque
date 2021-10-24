@@ -34,13 +34,14 @@ $(function () {
         var tabela = document.createElement("div");
         $(tabela).addClass("tabela");
         var table = document.createElement("table");
-        $(table).addClass("table").addClass("table-hover");
+        $(table).addClass("table").addClass("table-hover").addClass("scroll")
         var thead = document.createElement("thead");
         $(thead)
           .addClass("table-dark")
           .addClass(`tabela-head-${data.categoria.replace(" ","_")}`);
         var tbody = document.createElement("tbody");
         $(tbody).addClass(`tabela-corpo-${data.categoria.replace(" ","_")}`);
+        $(tbody).addClass("corpo")
         var tr = document.createElement("tr");
         $(tr).addClass("tabela-linha");
         var th1 = document.createElement("th");

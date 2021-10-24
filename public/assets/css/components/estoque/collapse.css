@@ -11,4 +11,6 @@
 
 .botao-categoria {
     margin: 0.25rem;
+    color: var(--cor-background-navbar);
+    border-color: var(--cor-background-navbar);
 }

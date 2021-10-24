@@ -9,7 +9,7 @@
 .tabela {
     margin-top: 3rem;
     width: 65rem;
-
+   
 }
 .tabela-item {
     border: var(--border-tabela);
@@ -33,8 +33,18 @@
 .botao-adicionar{
     height: 50px;
     width: 150px;
-    
+    background-color: var(--cor-background-navbar);
+    border-color: var(--cor-background-navbar);
 } 
+.botao-adicionar:hover {
+    background-color: var(--cor-background-navbar);
+    border-color: var(--cor-background-navbar);
+}
+
+.botao-categoria:hover {
+    background-color: var(--cor-background-navbar) !important;
+    border-color: var(--cor-background-navbar) !important;
+}
 
 .gg {
     display: flex;
@@ -42,6 +52,20 @@
     justify-content: center;
 }
 .botao-selecionado {
-    color: white;
-    background-color: #198754;
+    color: white !important;
+    background-color: var(--cor-background-navbar);
+    border-color: var(--cor-background-navbar);
 }
+
+.botao-selecionado:hover {
+    background-color: var(--cor-background-navbar);
+    border-color: var(--cor-background-navbar);
+}
+
+.input-cat {
+    align-self: flex-start;
+    height: 50px;
+    width: 150px;
+    margin-top: 1.2rem ;
+}
+

@@ -4,6 +4,8 @@
     background-color: var(--cor-background-navbar);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     position: fixed;
+    border-right: 15px solid grey;
+    border-radius: 0 80px 80px 0;
     
     
 }
@@ -11,17 +13,18 @@
 .navbar-item {
     margin-top: 0.5rem;
     margin-bottom: 2.3rem;
+    align-self: center;
 }
 
 .navbar-item__link {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     text-decoration: none;
     color: var(--cor-secundaria)
 }
 
 .navbar-item__link:hover {
     color: var(--cor-principal);
-    opacity: 0.7;
+    
 }
 
 .navbar {
@@ -33,7 +36,7 @@
 
 .navbar-titulo {
     font-family: var(--font-navbar);
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-style: inherit;
     color: var(--cor-principal);
     margin-top: 2rem;
@@ -44,21 +47,27 @@
     font-family: var(--font-navbar);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     margin-top: 4rem;
     width: 250px;
+    height: 700px;
+    
+    
     
 }
 
 
 .icon {
     margin-right: 0.5rem;
-    height: 1.3rem;
-    width: 1.4rem;
+    height: 1.7rem;
+    width: 1.7rem;
 }
 
 .navbar-linha {
     display: flex;
     justify-content: space-around;
+    
+    
 }
+
