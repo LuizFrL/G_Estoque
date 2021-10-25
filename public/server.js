@@ -34,5 +34,9 @@ app.get("/sobrenos", (req, res) => {
     res.sendFile(path.resolve(__dirname,"pages","sobrenos.html"))
 })
 
+app.get("/login", (req, res) => {
+    res.sendFile(path.resolve(__dirname,"pages","login.html"))
+})
+
 
 app.listen(process.env.PORT || 3002, () => console.log("server rodando"))

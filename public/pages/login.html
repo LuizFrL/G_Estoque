@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/fivicon/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="../assets/fivicon/favicon.ico" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="../assets/css/base/temaEscuro.css">
     <link rel="stylesheet" href="../assets/css/base/navbar.css">
     <link rel="stylesheet" href="../assets/css/base/container.css">
-    <link rel="stylesheet" href="../assets/css/components/ajuda/ajuda.css">
-    <title>G-Stock | Ajuda</title>
+    <link rel="stylesheet" href="../assets/css/components/meusdados/meusdados.css">
+    <title>G-Stock | Meus Dados</title>
 </head>
 <body>
     <main class="container-principal">
         <div class="container-navbar">
             <nav class="navbar">
                 <h1 class="navbar-titulo">G-STOCK</h1>
-                <div class="navbar--links">
+                <div class="navbar-links">
                     <ul class="navbar-itens">
                         
                         <li class="navbar-item">
@@ -34,7 +34,7 @@
                         </li>
                         <li class="navbar-item">
                             <div class="navbar-linha">
-                                <img class="icon" src="../assets/svg/login.svg" alt="">
+                              <img class="icon" src="../assets/svg/login.svg" alt="">
                               <a class="navbar-item__link" href="/login" data-link>Login</a>
                             </div>
                           </li>
@@ -56,48 +56,43 @@
                                 <a class="navbar-item__link" href="/sobrenos" data-link>Sobre nós</a>
                             </div>
                         </li>
-                        
+                       
                     </ul>
                 </div>
             </nav>
         </div>
         <div class="container-dashboard">
             <div class="dashboard">
-                <img src="../assets/icone-verde.png" class="logo" alt="">
-                <h2 class="dashboard-titulo"><span>|</span> AJUDA</h2>
+                <img src="../assets/icone-verde.png" width="60" alt="">
+                <h2 class="dashboard-titulo">| MEUS DADOS</h2>
             </div>
-            <div class="container-ajuda">
-                  <div class="mb-3">
-                      
-                    <label for="exampleFormControlTextarea1" class="form-label dashboard-titulo">Como Podemos te Ajudar ?</label>
-                    <div class="mb-3">
-                       
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="fulano@email.com">
+            <div class="container-meusdados">
+                <form class="row g-3 ">
+                    <label for="exampleFormControlTextarea1" class="form-label dashboard-titulo login-titulo">Login</label>
+                    <div class="col-md-10">
+                        <label for="inputEmail4" class="form-label form-texto">Email</label>
+                        <input type="email" class="form-control form-dados" id="inputEmail4" value="gsotck@email.com">
+                    </div>
+                    <div class="col-md-10">
+                        <label for="inputEmail4" class="form-label form-texto">Usuário</label>
+                        <input type="email" class="form-control form-dados" id="inputEmail4" value="gsotck@email.com">
+                    </div>
+                    <div class="col-md-10">
+                        <label for="inputEmail4" class="form-label form-texto">Senha</label>
+                        <input type="email" class="form-control form-dados" id="inputEmail4" value="gsotck@email.com">
+                    </div>
+                    <div class="col-6 botoes-dados" >
+                        <button type="submit" class="btn btn-outline-success botao-base">Autenticar</button>
+                        
                       </div>
-                    <textarea class="form-control form-textarea" id="exampleFormControlTextarea1" rows="3" placeholder="Digite sua dúvida aqui"></textarea>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn-outline-success botao-ajuda botao-base">Enviar</button>  
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label dashboard-titulo">Deixe sua Sugestão</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="fulano@email.com">
-                  </div>
-                  <div class="mb-3">
-                    
-                    <textarea class="form-control form-textarea" id="exampleFormControlTextarea1" rows="3" placeholder="Que sugestão você daria para a G-Stock ?"></textarea>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <button type="submit" class="btn btn btn-outline-success botao-ajuda botao-base">Enviar</button>  
-                    </div>
-                    
-                </div>
+                  </form>
             </div>
-        </div>
     </main>
-    
+   
   
 </body>
 <script src="../js/jquery.js"></script>
 <script src="../js/mudancaDeTema.js"></script>
-<script src="../router.js"></script>
+<script src="../js/manipuladados.js"></script>
+
 </html>

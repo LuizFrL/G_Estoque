@@ -4,8 +4,7 @@ function montarLinha() {
   var nomeForm = $(".formulario-nome").val();
   var valorFomr = $(".formulario-valor").val();
   var qntForm = $(".formulario-qnt").val();
-  var categoria = $("#select :selected").val();
-
+  var categoria = $(".formulario-cat").val();
   if (nomeForm == 0 || valorFomr == 0 || qntForm == 0) {
     return;
   } else {
@@ -67,6 +66,8 @@ function post(nome, valor, qnt, categoria) {
       );
       corpo.append(linha);
       limpaForm();
+      window.location.reload();
+
     },
     data: JSON.stringify(person),
   });

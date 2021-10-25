@@ -37,6 +37,12 @@
             </li>
             <li class="navbar-item">
               <div class="navbar-linha">
+                <img class="icon" src="../assets/svg/login.svg" alt="">
+                <a class="navbar-item__link" href="/login" data-link>Login</a>
+              </div>
+            </li>
+            <li class="navbar-item">
+              <div class="navbar-linha">
                 <img class="icon" src="../assets/svg/icon-dados.svg" alt="">
                 <a class="navbar-item__link" href="/meusdados" data-link>Meus Dados</a>
               </div>
@@ -68,14 +74,17 @@
         <input type="text" aria-label="Nome" class="form-control formulario-nome" placeholder="Nome">
         <input type="number" aria-label="Valor" class="form-control formulario-valor" placeholder="Valor">
         <input type="number" aria-label="Quantidade Disponível" class="form-control formulario-qnt" placeholder="Quantidade disponível">
-        <select id="select" class="formulario-select">
-           
-        </select>
+        <input type="text" aria-label="Categoria" class="form-control formulario-cat" placeholder="Categoria">
         
       </div>
       <div class="gg">
         
         <button type="submit" class="btn btn-success botao-adicionar botao-base">Adicionar Produto</button>
+        <div class="ff">
+          <input type="text" aria-label="Nome" class="form-control botao-pesquisa" placeholder="Exemplo: batata">
+          <button type="submit" class="btn btn-success botao-pesquisar botao-base">Pesquisar</button>
+        </div>
+       
         
         
       </div>
@@ -90,7 +99,7 @@
     
    
   </main>
-  
+ 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>

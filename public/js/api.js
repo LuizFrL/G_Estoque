@@ -1,5 +1,6 @@
-$(function () {
-  $.get("http://127.0.0.1:8000/estoque/?ordering=-categoria,nome", function (data, status) {
+$(criarTabela(""));
+function criarTabela (query) {
+  $.get(`http://127.0.0.1:8000/estoque/?${query}&ordering=-categoria,nome`, function (data, status) {
     var categorias = [];
     data.forEach((data) => {
       if (!categorias.includes(data.categoria)) {
@@ -19,6 +20,7 @@ $(function () {
           .click(function() {
             $(".botao-selecionado").removeClass("botao-selecionado")
             $(this).addClass("botao-selecionado")
+            $(".formulario-cat").val(data.categoria)
             
           })
         $(".botoes-grupo").prepend(botao);
@@ -62,9 +64,7 @@ $(function () {
         var th7 = document.createElement("th")
         $(th7).addClass("tabela-item").attr("scope", "col").text("SALVAR");
         $(".botoes-grupo").append(collapse);
-        var option = document.createElement("option");
-        $(option).val(data.categoria).text(data.categoria);
-        $(".formulario-select").append(option);
+        $(".formulario-cat").val(data.categoria);
         
         tr.append(th1, th2, th3, th4, th5, th7, th6);
         thead.append(tr);
@@ -114,4 +114,4 @@ $(function () {
       $(`.tabela-corpo-${data.categoria.replace(" ", "_")}`).append(tr);
     });
   });
-});
+}
