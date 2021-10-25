@@ -1,6 +1,6 @@
 import django_filters
 
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from estoque.models import EstoqueModel
@@ -24,6 +24,16 @@ class EstoqueFilterSet(django_filters.FilterSet):
         }
 
 
+# Permission class
+class IsAdminOrReadOnly(permissions.BasePermission):
+
+    def has_permission(self, request, view):
+        return bool(
+            request.method in permissions.SAFE_METHODS or
+            request.user and request.user.is_superuser
+        )
+
+
 # Create your views here.
 class EstoqueViewSet(viewsets.ModelViewSet):
     queryset = EstoqueModel.objects.all()
@@ -44,3 +54,6 @@ class EstoqueViewSet(viewsets.ModelViewSet):
 
     # SearchFilter fields config,
     search_fields = ['nome', 'categoria']
+
+    # Permission options
+    permission_classes = [permissions.IsAdminUser]
