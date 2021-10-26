@@ -56,4 +56,4 @@ class EstoqueViewSet(viewsets.ModelViewSet):
     search_fields = ['nome', 'categoria']
 
     # Permission options
-    permission_classes = [IsAdminOrReadOnly]
+    permission_classes = [IsAdminOrReadOnly, permissions.IsAuthenticated]
