@@ -28,7 +28,12 @@
         <h1 class="navbar-titulo">G-STOCK</h1>
         <div class="navbar--links">
           <ul class="navbar-itens">
-            
+          <li>
+              <div class="navbar-linha">
+                <img class="icon" src="../assets/svg/avatar.svg" alt="">
+                <a class="navbar-item__link usuario" data-link></a>
+              </div>
+            </li>
             <li class="navbar-item">
               <div class="navbar-linha">
                 <img class="icon" src="../assets/svg/icon-estoque.svg" alt="">
@@ -66,6 +71,7 @@
       <div class="dashboard">
         <img src="../assets/icone-verde.png" width="60" alt="logo ">
         <h2 class="dashboard-titulo">| ESTOQUE</h2>
+        <h1 class="avatar"></h1>
       </div>
       
       
@@ -79,10 +85,15 @@
       </div>
       <div class="gg">
         
-        <button type="submit" class="btn btn-success botao-adicionar botao-base">Adicionar Produto</button>
+        <button type="submit" class="btn botao-adicionar botao-base">Adicionar Produto</button>
+        <div class="text-center">
+          <div class="spinner-border text-success spinner-div" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
         <div class="ff">
           <input type="text" aria-label="Nome" class="form-control botao-pesquisa" placeholder="Exemplo: batata">
-          <button type="submit" class="btn btn-success botao-pesquisar botao-base">Pesquisar</button>
+          <button type="submit" class="btn botao-pesquisar botao-base">Pesquisar</button>
         </div>
        
         
@@ -105,7 +116,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <script src="../js/jquery.js"></script>
-
 <script src="../js/adicionaLinha.js"></script>
 <script src="../js/mudancaDeTema.js"></script>
 <script src="../js/removeLinha.js"></script>
@@ -113,6 +123,7 @@
 <script src="../js/editarTabela.js"></script>
 <script src="../js/botaoAtivo.js"></script>
 <script src="../js/mudaSelect.js"></script>
+<script src="../js/auth.js"></script>
 <script src="../js/api.js"></script>
-
+<script src="../js/avatarUsername.js"></script>
 </html>

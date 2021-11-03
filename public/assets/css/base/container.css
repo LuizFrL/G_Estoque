@@ -37,3 +37,8 @@
 .botao-categoria {
     width: 100px;
 }
+.botao-categoria:focus{
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}

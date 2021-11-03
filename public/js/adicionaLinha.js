@@ -25,11 +25,16 @@ function post(nome, valor, qnt, categoria) {
     qtd: qnt,
     valor: valor,
   };
+  
   $.ajax({
     url: "http://localhost:8000/estoque/",
     type: "POST",
     dataType: "json",
     contentType: "application/json",
+    headers: {
+      Authorization:
+        `Bearer ${document.token.access}`,
+    },
     success: function (data) {
       var corpo = $(`.tabela-corpo-${categoria.replace(" ", "_")}`);
       var linha = $("<tr>").addClass("tabela-linha");

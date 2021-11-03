@@ -12,20 +12,25 @@ $(document).on('click', '.salvar', function(){
     editar(getId, getNome, getQtd, getValor)
     
 });
-function editar(getId, getNome, getQtd, getValor) {
+function editar(getId, getNome, getQtd, getValor,) {
     var person = {
         
         nome: getNome,
         qtd: getQtd,
         valor: getValor
     }
+    
   $.ajax({
     url: `http://localhost:8000/estoque/${getId}/`,
     type: "PATCH",
     dataType: "json",
     contentType: "application/json",
+    headers: {
+      Authorization:
+        `Bearer ${document.token.access}`,
+    },
     success: function (data) {
-      console.log(data);
+     
     },
     data: JSON.stringify(person)
   });
