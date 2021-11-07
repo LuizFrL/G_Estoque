@@ -7,9 +7,12 @@ function montarLinha() {
   var categoria = $(".formulario-cat").val();
   if (nomeForm == 0 || valorFomr == 0 || qntForm == 0) {
     return;
-  } else {
+  }  if(localStorage.getItem('username') === "admin") {
     post(nomeForm, valorFomr, qntForm, categoria);
+  } else {
+    alert("Somente o Administrador pode fazer alterações nas tabelas");
   }
+  
 }
 
 function limpaForm() {
@@ -33,7 +36,7 @@ function post(nome, valor, qnt, categoria) {
     contentType: "application/json",
     headers: {
       Authorization:
-        `Bearer ${document.token.access}`,
+      `Bearer ${localStorage.getItem("token")}`,
     },
     success: function (data) {
       var corpo = $(`.tabela-corpo-${categoria.replace(" ", "_")}`);
@@ -70,8 +73,9 @@ function post(nome, valor, qnt, categoria) {
         itemExcluir
       );
       corpo.append(linha);
+      $(`.table-${data.categoria.replace(" ", "_")}`).append(corpo)
       limpaForm();
-      window.location.reload();
+      
 
     },
     data: JSON.stringify(person),

@@ -10,9 +10,12 @@ function getToken(username, password) {
     data: credentials,
     success: function (data) {
       localStorage.setItem("token", `${data.access}`);
-      localStorage.setItem("username", `${username}`);
-      
+      localStorage.setItem("username", `${username}`)
+      console.log(data.access)
       document.isAdmin = credentials.username
     },
+    error: function(error) {
+      console.log(error)
+    }
   });
 }

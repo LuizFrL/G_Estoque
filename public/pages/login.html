@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="../assets/css/base/temaEscuro.css">
     <link rel="stylesheet" href="../assets/css/base/navbar.css">
     <link rel="stylesheet" href="../assets/css/base/container.css">
+    <link rel="stylesheet" href="../assets/css/components/estoque/tabela.css">
     <link rel="stylesheet" href="../assets/css/components/meusdados/meusdados.css">
-    <title>G-Stock | Login</title>
+    <title>G-Stock | Autenticação</title>
 </head>
 <body>
     <main class="container-principal">
@@ -69,7 +70,7 @@
         <div class="container-dashboard">
             <div class="dashboard">
                 <img src="../assets/icone-verde.png" width="60" alt="">
-                <h2 class="dashboard-titulo">| LOGIN</h2>
+                <h2 class="dashboard-titulo">| LOGIN </h2>
             </div>
             <div class="container-meusdados">
                 <form class="row g-3 ">
@@ -80,10 +81,31 @@
                     </div>
                     <div class="col-md-10">
                         <label for="inputSenha" class="form-label form-texto">Senha</label>
-                        <input type="text" class="form-control form-dados senha-login" value="senha123">
+                        <input type="password" class="form-control form-dados senha-login" value="senha123">
                     </div>
                     <div class="col-6 botoes-dados" >
                         <button type="submit" class="btn btn-outline-success botao-base botao-autentica">Autenticar</button>
+                        
+                      </div>
+                  </form>
+            </div>
+            <div class="container-meusdados container-registrar">
+                <form class="row g-3 ">
+                    <label for="exampleFormControlTextarea1" class="form-label dashboard-titulo login-titulo">Cadastrar</label>
+                    <div class="col-md-10">
+                        <label for="inputUsuario" class="form-label form-texto">Email</label>
+                        <input type="email" class="form-control form-dados "  value="gstock@email.com">
+                    </div>
+                    <div class="col-md-10">
+                        <label for="inputUsuario" class="form-label form-texto">Usuário</label>
+                        <input type="text" class="form-control form-dados"  value="usuario123">
+                    </div>
+                    <div class="col-md-10">
+                        <label for="inputSenha" class="form-label form-texto">Senha</label>
+                        <input type="password" class="form-control form-dados " value="senha123">
+                    </div>
+                    <div class="col-6 botoes-dados" >
+                        <button type="submit" class="btn btn-outline-success botao-base botao-autentica">Cadastrar usuário</button>
                         
                       </div>
                   </form>

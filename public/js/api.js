@@ -56,7 +56,7 @@ function criarTabela(query) {
           var tabela = document.createElement("div");
           $(tabela).addClass("tabela");
           var table = document.createElement("table");
-          $(table).addClass("table").addClass("table-hover").addClass("scroll");
+          $(table).addClass("table").addClass("table-hover").addClass("scroll").addClass(`table-${data.categoria.replace(" ", "_")}`)
           var thead = document.createElement("thead");
           $(thead)
             .addClass("table-dark")

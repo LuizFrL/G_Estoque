@@ -108,3 +108,11 @@
 .avatar {
     align-self: flex-end;
 }
+
+.container-hidden {
+    visibility: hidden;
+}
+
+.container-show {
+    visibility: visible;
+}

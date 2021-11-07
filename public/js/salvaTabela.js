@@ -27,7 +27,7 @@ function editar(getId, getNome, getQtd, getValor,) {
     contentType: "application/json",
     headers: {
       Authorization:
-        `Bearer ${document.token.access}`,
+        `Bearer ${localStorage.getItem("token")}`,
     },
     success: function (data) {
      

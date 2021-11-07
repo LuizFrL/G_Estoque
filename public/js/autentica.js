@@ -1,14 +1,27 @@
+$(document).ready(function () {
+  if(localStorage.getItem('username') === "admin") {
+    $(".container-registrar").removeClass("container-hidden").addClass("container-show")
+  } else {
+    $(".container-registrar").removeClass("container-show").addClass("container-hidden")
+  }
+});
+
+
 $(".botao-autentica").click(autentica);
 
 function autentica(event) {
-  var usuario = $(".usuario-login").val();
-  var senha = $(".senha-login").val();
+  var username = $(".usuario-login").val();
+  var password = $(".senha-login").val();
 
   event.preventDefault();
-  post(usuario, senha);
+  post(username, password);
+  
+  location.reload();
 }
 
-function post(usuario, senha) {
-  getToken(usuario, senha);
+function post(username, password) {
+  getToken(username, password);
+  localStorage.setItem("username", `${username}`)
   
 }
+
