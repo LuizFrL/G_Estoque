@@ -4,7 +4,7 @@ MAINTAINER Luiz Fernando O BRABO
 COPY ./ ./api
 WORKDIR ./api
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -e .
 
 ENTRYPOINT python manage.py runserver 0.0.0.0:8000
 
