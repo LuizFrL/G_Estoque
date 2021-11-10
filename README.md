@@ -23,15 +23,15 @@ assim seu projeto fica separado dos residentes em seu python root. Para isso
 acesse o tutorial [aqui](https://docs.python.org/pt-br/3/tutorial/venv.html).
 
 Apos ativar seu ambiente virtual no terminal, você precisa instalar as dependencias do
-projeto, para fazer isso, vamos usar o arquivo `requirements.txt` que contem todas as 
+projeto, para fazer isso, vamos usar o arquivo `setup.py` que contem todas as 
 versões das bibliotecas do projeto, para realizar esse feito, certifique-se de 2 coisas
 - 1º Esteja com seu ambiente virtual ativado.
-- 2º Esteja no mesmo diretorio que o arquivo `requirements.txt`.
+- 2º Esteja no mesmo diretorio que o arquivo `setup.py`.
 
 Depois de verificar as condições mencionadas a cima, voce deve executar o comando para 
 instalar as dependencias do projeto, no caso:
 
-`pip install -r .\requirements.txt`
+`pip install -e .`
 
 Pronto, dessa forma o projeto G_Estoque esta pronto para rodar localmente no seu computador,
 so temos que rodar um comando agora, para subir a API localmente:
@@ -39,8 +39,16 @@ so temos que rodar um comando agora, para subir a API localmente:
 `python manage.py runserver`
 
 
-Novamente, é necessario estar no mesmo diretorio em que o arquivo `requirements.txt`
+Novamente, é necessario estar no mesmo diretorio em que o arquivo `setup.py`
 se encontra.
+
+Caso voce não queira instalar a aplicação ou achou o processo um tanto quanto complicado, dentro 
+do root do projeto, você pode executar o comando:
+
+`docker-compose run -d` 
+
+Caso tenha o docker instalado na sua máquina, esse comando é equivalente aos comandos 
+listados a baixo.
 
 ---
 ### Usando Docker
