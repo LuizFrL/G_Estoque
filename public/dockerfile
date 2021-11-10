@@ -1,0 +1,9 @@
+FROM node
+
+COPY ./ ./front
+
+WORKDIR ./front
+
+RUN npm install
+
+ENTRYPOINT npm start

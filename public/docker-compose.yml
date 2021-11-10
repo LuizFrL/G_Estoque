@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  back-end-service:
+    image: 983515929/g_estoque
+    container_name: back-end-gstoque
+    ports:
+      - "8000:8000"
+
+  front-end-service:
+    build:
+      context: .
+    container_name: front-end-gestoque
+    depends_on:
+      - back-end-service
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./:/front
