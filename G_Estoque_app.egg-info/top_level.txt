@@ -1,4 +1,0 @@
-api
-estoque
-feedback
-users
