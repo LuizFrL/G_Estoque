@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'drf_yasg',
     'estoque.apps.EstoqueConfig',
     'feedback.apps.FeedbackConfig',
     'users.apps.UsersConfig',
