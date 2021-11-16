@@ -17,7 +17,8 @@ setup(
         'pytz==2021.1',
         'requests==2.26.0',
         'sqlparse==0.4.2',
-        'urllib3==1.26.7'
+        'urllib3==1.26.7',
+        'drf-yasg==1.20.0'
     ],
     author='Luiz Fernando Rodrigues Lemos',
     author_email='luizfernandorole@sempreceub.com'
