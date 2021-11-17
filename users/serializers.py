@@ -12,10 +12,8 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         if validated_data.get('is_superuser'):
-            return Response(User.objects.create_superuser(**validated_data),
-                            status.HTTP_201_CREATED)
-        return Response(User.objects.create_user(**validated_data),
-                        status.HTTP_201_CREATED)
+            return User.objects.create_superuser(**validated_data)
+        return User.objects.create_user(**validated_data)
 
     def update(self, instance, validated_data):
         user = User.objects.get(username=instance)
