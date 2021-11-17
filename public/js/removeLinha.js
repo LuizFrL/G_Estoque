@@ -6,7 +6,8 @@ $(document).on("click", ".exclui", function () {
 
     deletar(getId, elemento);
   } else {
-    alert("Somente o Administrador pode fazer alterações nas tabelas");
+    $(".mensagem-erro").text("Somente o Administrador pode fazer alterações nas tabelas")
+      $(".erros").prepend($(".mensagem-erro"))
   }
 });
 

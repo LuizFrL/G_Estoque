@@ -1,12 +1,11 @@
 $(document).ready(function () {
   $(".spinner-div").addClass("spinner-show");
+
 });
 
 if (localStorage.getItem('token')) {
   setTimeout( function() {
     $(criarTabela(""));
-    $(".spinner-div").removeClass("spinner-show");
-    $(".spinner-div").addClass("spinner-hidden");
     }
     , 4000 );
 }
@@ -134,5 +133,12 @@ function criarTabela(query) {
         $(`.tabela-corpo-${data.categoria.replace(" ", "_")}`).append(tr);
       });
     },
+    error: function(error) {
+      var erroTabela = document.createElement("h1")
+      $(erroTabela).text("Você não tem autorização para acessar as tabelas").addClass("mensagem-erro")
+      $(".erros").append(erroTabela)
+    }
   });
+  $(".spinner-div").removeClass("spinner-show");
+    $(".spinner-div").addClass("spinner-hidden");
 }

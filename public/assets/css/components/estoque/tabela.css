@@ -110,9 +110,20 @@
 }
 
 .container-hidden {
-    visibility: hidden;
+    display: none;
 }
 
 .container-show {
-    visibility: visible;
+    display: initial;
+}
+.bemVindo{
+    font-size: 50px;
+}
+
+.mensagem-erro{
+    color: red;
+    font-size: 25px;
+}
+.erro-tabela{
+    margin-top: 2rem
 }

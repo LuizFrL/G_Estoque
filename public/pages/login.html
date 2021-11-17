@@ -41,7 +41,7 @@
                         <li class="navbar-item">
                             <div class="navbar-linha">
                               <img class="icon" src="../assets/svg/login.svg" alt="">
-                              <a class="navbar-item__link" href="/login" data-link>Login</a>
+                              <a class="navbar-item__link navbar-item__login" href="/login" data-link>Login</a>
                             </div>
                           </li>
                         <li class="navbar-item">
@@ -72,40 +72,44 @@
                 <img src="../assets/icone-verde.png" width="60" alt="">
                 <h2 class="dashboard-titulo">| LOGIN </h2>
             </div>
-            <div class="container-meusdados">
-                <form class="row g-3 ">
+            <div class="container-meusdados login">
+            </div>
+            <div class="container-meusdados ">
+                <form class="row g-3 container-login">
                     <label for="exampleFormControlTextarea1" class="form-label dashboard-titulo login-titulo">Login</label>
                     <div class="col-md-10">
                         <label for="inputUsuario" class="form-label form-texto">Usuário</label>
-                        <input type="text" class="form-control form-dados usuario-login"  value="usuario123">
+                        <input type="text" class="form-control form-dados usuario-login"  value="">
                     </div>
                     <div class="col-md-10">
                         <label for="inputSenha" class="form-label form-texto">Senha</label>
-                        <input type="password" class="form-control form-dados senha-login" value="senha123">
+                        <input type="password" class="form-control form-dados senha-login" value="">
                     </div>
-                    <div class="col-6 botoes-dados" >
-                        <button type="submit" class="btn btn-outline-success botao-base botao-autentica">Autenticar</button>
-                        
-                      </div>
+                    
                   </form>
+                  <div class="col-6 botoes-dados" >
+                    <button type="submit" class="btn btn-outline-success botao-base botao-autentica">Entrar</button>
+                    <button type="submit" class="btn btn-outline-success botao-base botao-logout">Desconectar</button>
+                    
+                  </div>
             </div>
             <div class="container-meusdados container-registrar">
                 <form class="row g-3 ">
                     <label for="exampleFormControlTextarea1" class="form-label dashboard-titulo login-titulo">Cadastrar</label>
                     <div class="col-md-10">
                         <label for="inputUsuario" class="form-label form-texto">Email</label>
-                        <input type="email" class="form-control form-dados "  value="gstock@email.com">
+                        <input type="email" class="form-control form-dados cadastro-email"  value="gstock@email.com">
                     </div>
                     <div class="col-md-10">
                         <label for="inputUsuario" class="form-label form-texto">Usuário</label>
-                        <input type="text" class="form-control form-dados"  value="usuario123">
+                        <input type="text" class="form-control form-dados cadastro-username"  value="usuario123">
                     </div>
                     <div class="col-md-10">
                         <label for="inputSenha" class="form-label form-texto">Senha</label>
-                        <input type="password" class="form-control form-dados " value="senha123">
+                        <input type="password" class="form-control form-dados cadastro-password" value="senha123">
                     </div>
                     <div class="col-6 botoes-dados" >
-                        <button type="submit" class="btn btn-outline-success botao-base botao-autentica">Cadastrar usuário</button>
+                        <button type="submit" class="btn btn-outline-success botao-base botao-cadastra">Cadastrar usuário</button>
                         
                       </div>
                   </form>
@@ -120,4 +124,5 @@
 <script src="../js/auth.js"></script>
 <script src="../js/autentica.js"></script>
 <script src="../js/avatarUsername.js"></script>
+<script src="../js/logout.js"></script>
 </html>

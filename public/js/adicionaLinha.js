@@ -30,7 +30,7 @@ function post(nome, valor, qnt, categoria) {
   };
   
   $.ajax({
-    url: "http://localhost:8000/estoque/",
+    url: "http://127.0.0.1:8000/estoque/",
     type: "POST",
     dataType: "json",
     contentType: "application/json",
@@ -72,7 +72,7 @@ function post(nome, valor, qnt, categoria) {
         itemSalvar,
         itemExcluir
       );
-      corpo.append(linha);
+      corpo.prepend(linha);
       $(`.table-${data.categoria.replace(" ", "_")}`).append(corpo)
       limpaForm();
       

@@ -3,6 +3,7 @@ function getToken(username, password) {
     username: username,
     password: password
   };
+  console.log(credentials)
   const API = "http://127.0.0.1:8000";
   $.ajax({
     method: "POST",
@@ -11,11 +12,8 @@ function getToken(username, password) {
     success: function (data) {
       localStorage.setItem("token", `${data.access}`);
       localStorage.setItem("username", `${username}`)
-      console.log(data.access)
       document.isAdmin = credentials.username
     },
-    error: function(error) {
-      console.log(error)
-    }
+    
   });
 }
