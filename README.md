@@ -68,5 +68,5 @@ E pronto, a API na versão mais recente e estável ja esta rodando na sua máqui
 
 ## Funcionamento
 
-Acessar a rota `/docs` ou `/doc` para ter acesso ao funcionamento da
+Acessar a rota base da aplicação (`/`) para ter acesso à documentação da
 API. 
