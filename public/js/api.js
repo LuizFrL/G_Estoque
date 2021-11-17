@@ -1,6 +1,5 @@
 $(document).ready(function () {
   $(".spinner-div").addClass("spinner-show");
-
 });
 
 if (localStorage.getItem('token')) {
