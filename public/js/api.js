@@ -26,7 +26,7 @@ function criarTabela(query) {
             .addClass("btn")
             .addClass("btn-outline-success")
             .addClass("botao-categoria")
-
+            .addClass(`botao-categoria${data.categoria.replace(" ", "_")}`)
             .attr("type", "button")
             .attr("data-toggle", "collapse")
             .attr(

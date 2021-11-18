@@ -14,11 +14,8 @@ function getFeedback(){
         alerta = "Sua sugestão foi enviada!"
     }
 
-
     postAjuda(email, feedback, type_id)
     alert(alerta)
-    
-
 
 }
 
@@ -28,6 +25,7 @@ function postAjuda(email, feedback, type_id) {
       feedback: feedback,
       type_id: type_id
     }
+    
     $.ajax({
         url: "http://localhost:8000/feedback/",
         type: "POST",

@@ -26,11 +26,11 @@ $(".botao-logout").click(logout);
 function autentica(event) {
   var username = $(".usuario-login").val();
   var password = $(".senha-login").val();
-
-  post(username, password);
-
-  alert("Logado com sucesso");
  
+    post(username, password);
+    modal()
+  
+
 }
 
 function post(username, password) {
@@ -61,4 +61,8 @@ function criaBemVindo() {
 
 function fodase() {
   window.location.href = "http://localhost:3002/estoque"
+}
+
+function modal() {
+  return (`<h1> dhuasuhsahusa </h1>`)
 }
