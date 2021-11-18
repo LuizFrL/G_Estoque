@@ -1,7 +1,6 @@
 from django.contrib.auth.models import User
-from rest_framework import status
-from rest_framework.response import Response
 from rest_framework import serializers
+from rest_framework.serializers import ValidationError
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -17,6 +16,11 @@ class UserSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         user = User.objects.get(username=instance)
-        user.set_password(validated_data['password'])
-        user.save()
-        return user
+        request = self.context.get("request")
+        if instance == request.user:
+            user.set_password(validated_data['password'])
+            user.save()
+            return user
+        raise ValidationError(
+            {"error": "The logged user is different from the "
+                      "user who wants to change the password."})
