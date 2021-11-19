@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  if (localStorage.getItem("username") === "admin" || localStorage.getItem("admin") === "true") {
+  if (localStorage.getItem("admin") === "true") {
     $(".container-registrar")
       .removeClass("container-hidden")
       .addClass("container-show");
@@ -26,7 +26,7 @@ $(".botao-logout").click(logout);
 function autentica(event) {
   var username = $(".usuario-login").val();
   var password = $(".senha-login").val();
- 
+  
     post(username, password);
 
 }
@@ -45,7 +45,6 @@ function post(username, password) {
 function logout() {
   localStorage.setItem("username", ` `);
   localStorage.setItem("token", ` `);
-  localStorage.setItem("admin", "false")
   verificaAdmin()
   location.reload();
   
@@ -64,19 +63,3 @@ function fodase() {
 }
 
 
-function verificaAdmin(){
-  $.ajax({
-    type: "GET",
-    url: `http://localhost:8000/user/`,
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem('token')}`
-    },
-    success:function(data){
-      localStorage.setItem("admin", "true")
-    },
-    error:function(erro){
-      localStorage.setItem("admin", "false")
-      
-    }
-  })
-}

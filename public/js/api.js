@@ -1,10 +1,13 @@
 $(document).ready(function () {
   $(".spinner-div").addClass("spinner-show");
+  
+  
 });
 
 if (localStorage.getItem('token')) {
   setTimeout( function() {
     $(criarTabela(""));
+    verificaAdmin()
     }
     , 4000 );
 }
@@ -140,4 +143,21 @@ function criarTabela(query) {
   });
   $(".spinner-div").removeClass("spinner-show");
     $(".spinner-div").addClass("spinner-hidden");
+}
+
+function verificaAdmin(){
+  $.ajax({
+    type: "GET",
+    url: `http://localhost:8000/user/`,
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem('token')}`
+    },
+    success: function(data){
+      localStorage.setItem("admin", "true")
+    },
+    error: function(erro){
+      localStorage.setItem("admin", "false")
+      
+    }
+  })
 }

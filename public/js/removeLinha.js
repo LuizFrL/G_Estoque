@@ -1,5 +1,5 @@
 $(document).on("click", ".exclui", function () {
-  if(localStorage.getItem('username') === "admin" || localStorage.getItem('admin') === "true" ) {
+  if(localStorage.getItem('admin') === "true" ) {
     var elemento = $(this).parent().parent();
     var id = $(elemento).children()[0];
     var getId = $(id).text();

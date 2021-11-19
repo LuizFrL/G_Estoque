@@ -7,7 +7,7 @@ function montarLinha() {
   var categoria = $(".formulario-cat").val();
   if (nomeForm == 0 || valorFomr == 0 || qntForm == 0) {
     return;
-  }  if(localStorage.getItem('username') === "admin" || localStorage.getItem('admin') === "true" ) {
+  }  if(localStorage.getItem('admin') === "true" ) {
     post(nomeForm, valorFomr, qntForm, categoria);
   } else {
     alert("Somente o Administrador pode fazer alterações nas tabelas");
