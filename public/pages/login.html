@@ -90,9 +90,27 @@
                   <div class="col-6 botoes-dados" >
                     <button type="submit" class="btn btn-outline-success botao-base botao-autentica">Entrar</button>
                     <button type="submit" class="btn btn-outline-success botao-base botao-logout">Desconectar</button>
-                    
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-outline-success botao-base botao-altera" >
+                        Alterar Senha
+                    </button>
                   </div>
             </div>
+            <div class="container-meusdados container-altera container-hidden">
+                <form class="row g-3 ">
+                    <label for="exampleFormControlTextarea1" class="form-label dashboard-titulo login-titulo">Alterar Senha</label>
+                    <div class="col-md-10">
+                        <label for="inputSenha" class="form-label form-texto">Nova Senha</label>
+                        <input type="password" class="form-control form-dados cadastro-password" value="senha123">
+                    </div>
+                    
+                        
+                    <div class="col-6 botoes-dados" >
+                        <button type="submit" class="btn btn-outline-success botao-base">Confirmar</button>
+                        
+                      </div>
+                      </form>
+                    </div>
             <div class="container-meusdados container-registrar">
                 <form class="row g-3 ">
                     <label for="exampleFormControlTextarea1" class="form-label dashboard-titulo login-titulo">Cadastrar</label>
@@ -118,7 +136,8 @@
                         <button type="submit" class="btn btn-outline-success botao-base botao-cadastra">Cadastrar usuário</button>
                         
                       </div>
-                      
+                           
+            
                   </form>
             </div>
     </main>
@@ -132,4 +151,5 @@
 <script src="../js/autentica.js"></script>
 <script src="../js/avatarUsername.js"></script>
 <script src="../js/logout.js"></script>
+<script src="../js/alterarSenha.js"></script>
 </html>

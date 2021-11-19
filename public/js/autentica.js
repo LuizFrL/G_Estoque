@@ -39,13 +39,14 @@ function post(username, password) {
     $(fodase());
     }
     , 2000 );
+    
   
 }
 
 function logout() {
   localStorage.setItem("username", ` `);
   localStorage.setItem("token", ` `);
-  verificaAdmin()
+  localStorage.setItem("admin", "false");
   location.reload();
   
 }
