@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  if (localStorage.getItem("admin") === "true") {
+  if (localStorage.getItem("username") === "admin" || localStorage.getItem("admin") === "true") {
     $(".container-registrar")
       .removeClass("container-hidden")
       .addClass("container-show");
@@ -45,7 +45,7 @@ function post(username, password) {
 function logout() {
   localStorage.setItem("username", ` `);
   localStorage.setItem("token", ` `);
-  verificaAdmin()
+  localStorage.setItem("admin", "false")
   location.reload();
   
 }
