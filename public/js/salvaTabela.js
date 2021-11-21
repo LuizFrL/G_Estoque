@@ -12,7 +12,7 @@ $(document).on('click', '.salvar', function(){
     editar(getId, getNome, getQtd, getValor)
     
 });
-function editar(getId, getNome, getQtd, getValor,) {
+function editar(getId, getNome, getQtd, getValor) {
     var person = {
         
         nome: getNome,

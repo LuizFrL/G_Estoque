@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  if (localStorage.getItem("username") === "admin" || localStorage.getItem("admin") === "true") {
+  if (localStorage.getItem("admin") === "true") {
     $(".container-registrar")
       .removeClass("container-hidden")
       .addClass("container-show");
@@ -32,20 +32,21 @@ function autentica(event) {
 }
 
 function post(username, password) {
+  
   getToken(username, password);
-
-  localStorage.setItem("username", `${username}`);
   setTimeout( function() {
-    $(fodase());
+    redirecionaEstoque()
     }
-    , 2000 );
+    , 1000 );
+  
   
 }
 
 function logout() {
   localStorage.setItem("username", ` `);
   localStorage.setItem("token", ` `);
-  localStorage.setItem("admin", "false")
+  localStorage.setItem("admin", "false");
+  $(".botao-altera").addClass("container-hidden");
   location.reload();
   
 }
@@ -58,7 +59,7 @@ function criaBemVindo() {
   $(".login").append(bemVindo);
 }
 
-function fodase() {
+function redirecionaEstoque() {
   window.location.href = "http://localhost:3002/estoque"
 }
 

@@ -2,7 +2,7 @@
 $(".botao-cadastra").click(getCadastro)
 
 
-function getCadastro() {
+function getCadastro(event) {
     var email = $(".cadastro-email").val()
     var username = $(".cadastro-username").val()
     var password = $(".cadastro-password").val()
@@ -16,7 +16,7 @@ function getCadastro() {
   }
 
     postCadastro(email, username, password, is_superuser)
-    alert("Usuario cadastrado com sucesso!!")
+    event.preventDefault()
 }
 
 
@@ -27,6 +27,7 @@ function postCadastro(email, username, password, is_superuser) {
       password: password,
       is_superuser: is_superuser,
     }
+    console.log(person)
     $.ajax({
         url: "http://127.0.0.1:8000/user/",
         type: "POST",
@@ -37,7 +38,13 @@ function postCadastro(email, username, password, is_superuser) {
           `Bearer ${localStorage.getItem("token")}`
         },
         success: function (data) {
-            
+          console.log("dddd")
+          alert("Usuario cadastrado com sucesso!!")
+          
+        },
+        error: function(erro) {
+          console.log(erro)
+          console.log("erro")
         },
         data: JSON.stringify(person)
     })
