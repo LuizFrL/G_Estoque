@@ -45,7 +45,13 @@ function postAjuda(email, feedback, type) {
         type: "POST",
         dataType: "json",
         contentType: "application/json",
-        data: JSON.stringify(person)
+        data: JSON.stringify(person),
+        success: function(data) {
+            console.log("ndds")
+        },
+        error: function(erro) {
+            console.log(erro)
+        },
     })
 }
 

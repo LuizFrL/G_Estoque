@@ -1,11 +1,46 @@
 .container-sobrenos {
-    margin-top: 3rem;
-    width: 700px  ;
-    align-self: center;
-    background-color: #e9ecef;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
-.h1 {
+.t1 {
     padding: 2rem;
+    margin-left: 3rem;
+    font-size: 1.8rem;
+}
+
+.t2{
+    padding: 2rem;
+    margin-right: 3rem;
+    font-size: 1.8rem;
+}
+
+.int-sobrenos {
+    display: flex;
+    width: 80%;
+    background-color: #faf8f8;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    height: 300px;
+    border: 10px solid gray;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+.sobrenos1 {   
+    margin-top: 1.5rem;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.sobrenos2 {
+    margin-top: 1.5rem;
+    align-self: flex-end;
+}
+.sobrenos3 {
+    margin-top: 1.5rem;
+    align-self: flex-start;
+    margin-bottom: 3rem;
+    width: 100%;
+
 }
