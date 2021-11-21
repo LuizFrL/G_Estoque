@@ -37,7 +37,7 @@ function post(username, password) {
   setTimeout( function() {
     redirecionaEstoque()
     }
-    , 1000 );
+    , 3000 );
   
   
 }

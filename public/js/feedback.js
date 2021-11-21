@@ -5,25 +5,39 @@ function getFeedback(){
     var feedback = $(".texto-duvida").val()
     var selecionado = $('#select').val();
     var alerta = ""
+
     if (selecionado == 1){
-        var type_id = 1
+        var type = 1
+        console.log()
         alerta = "Sua dúvida foi enviada!"
     }
     if (selecionado == 2){
-        var type_id = 2
+        var type = 2
+        console.log()
         alerta = "Sua sugestão foi enviada!"
     }
+    if (selecionado == 3){
+        var type = 3
+        console.log()
+        alerta = "Sua crítica foi enviada!"
+    }
+    if (selecionado == 4){
+        var type = 4
+        console.log()
+        alerta = "Sua opinião foi enviada!"
+    }
 
-    postAjuda(email, feedback, type_id)
-    alert(alerta)
+
+postAjuda(email, feedback, type)
+alert(alerta)
 
 }
 
-function postAjuda(email, feedback, type_id) {
+function postAjuda(email, feedback, type) {
     var person = {
       email: email,
       feedback: feedback,
-      type_id: type_id
+      type: type
     }
     
     $.ajax({
