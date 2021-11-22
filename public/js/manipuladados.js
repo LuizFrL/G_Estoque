@@ -6,6 +6,8 @@ $(".container-meusdados").on('mouseover', desativaPeloEnter)
 
 function ativaForm(event) {
   event.preventDefault()
+
+    $('#myModal').modal('show');
   $(".form-dados").prop("disabled", false)   
 
 }

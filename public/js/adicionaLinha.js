@@ -158,3 +158,8 @@ function post(nome, valor, qnt, categoria) {
     data: JSON.stringify(person),
   });
 }
+
+
+function abre() {
+  $('#myModal').modal('show');
+}

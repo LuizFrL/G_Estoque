@@ -25,7 +25,7 @@ function getNovaSenha(event) {
   if(novaSenha === confirma) {
     alteraSenha(novaSenha, usuario)
   } else {
-    alert("senhas diferentes")
+    $('#myModalSenhaErro').modal('show');
   }
   
   event.preventDefault()
@@ -45,7 +45,10 @@ function alteraSenha(novaSenha, usuario) {
         `Bearer ${localStorage.getItem("token")}`,
     },
     success: function (data) {
-     alert("vc mudou a senha")
+      $('#myModalSenha').modal('show');
+    },
+    error: function (data) {
+      $('#myModalSenhaErro').modal('show');
     },
     data: JSON.stringify(person)
   });

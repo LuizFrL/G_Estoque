@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   if (localStorage.getItem("admin") === "true") {
     $(".container-registrar")
@@ -29,11 +30,13 @@ function autentica(event) {
   
     post(username, password);
 
+
 }
 
 function post(username, password) {
   
   getToken(username, password);
+  
   setTimeout( function() {
     redirecionaEstoque()
     }

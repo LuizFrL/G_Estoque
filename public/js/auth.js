@@ -13,7 +13,11 @@ function getToken(username, password) {
       localStorage.setItem("token", `${data.access}`);
       localStorage.setItem("username", `${username}`)
       document.isAdmin = credentials.username
+      $('#myModalLogin').modal('show');
     },
+    error: function (erro) {
+      console.log(erro)
+    }
     
   });
 }

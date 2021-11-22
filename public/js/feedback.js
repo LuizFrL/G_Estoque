@@ -29,7 +29,7 @@ function getFeedback(){
 
 
 postAjuda(email, feedback, type)
-alert(alerta)
+
 
 }
 
@@ -47,10 +47,11 @@ function postAjuda(email, feedback, type) {
         contentType: "application/json",
         data: JSON.stringify(person),
         success: function(data) {
-            console.log("ndds")
+            $('#myModalAjuda').modal('show');
         },
         error: function(erro) {
-            console.log(erro)
+            $('#myModalFeedbackErro').modal('show');
+            
         },
     })
 }

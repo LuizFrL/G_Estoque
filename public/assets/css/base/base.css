@@ -63,3 +63,7 @@ textarea::placeholder {
     border-color: #ced4da;
 }
 
+.texto-modal {
+    font-size: 1.3rem;
+    text-align: center;
+}

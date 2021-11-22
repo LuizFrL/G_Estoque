@@ -38,13 +38,12 @@ function postCadastro(email, username, password, is_superuser) {
           `Bearer ${localStorage.getItem("token")}`
         },
         success: function (data) {
-          console.log("dddd")
-          alert("Usuario cadastrado com sucesso!!")
+          $('#myModalCadastrar').modal('show');
           
         },
         error: function(erro) {
-          console.log(erro)
-          console.log("erro")
+          $('#myModalCadastrarErro').modal('show');
+          
         },
         data: JSON.stringify(person)
     })
